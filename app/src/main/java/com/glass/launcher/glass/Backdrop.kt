@@ -59,7 +59,7 @@ class Backdrop {
             context.contentResolver.openInputStream(Uri.parse(uri))?.use { BitmapFactory.decodeStream(it, null, opts) }
         }.getOrNull()?.let { return it }
         if (tryDevice) runCatching {
-            val d = WallpaperManager.getInstance(context).drawable
+            val d = WallpaperManager.getInstance(context).drawable ?: error("no wallpaper")
             val ratio = d.intrinsicHeight.toFloat() / d.intrinsicWidth
             val b = Bitmap.createBitmap(targetW, (targetW * ratio).toInt().coerceAtLeast(1), Bitmap.Config.ARGB_8888)
             d.setBounds(0, 0, b.width, b.height); d.draw(Canvas(b)); b

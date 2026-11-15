@@ -8,7 +8,9 @@ import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalViewConfiguration
 import androidx.compose.ui.composed
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.ui.unit.dp
 import com.glass.launcher.data.GestureAction
 import com.glass.launcher.data.GlassSettings
 import kotlin.math.abs
