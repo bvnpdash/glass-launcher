@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Glass</string>
+    <string name="lock_service_desc">Lets Glass lock the screen when you double-tap the home screen. No screen content is read.</string>
+</resources>
